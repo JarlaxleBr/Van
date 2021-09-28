@@ -14,4 +14,6 @@ for event in longpoll.listen():
             write_message(sender, "Приветики коотик")
         elif reseived_message == "Привет":
             write_message(sender, "O Hi Mark!")
+        elif reseived_message == "Книга":
+            write_message(sender, "Attention")
 
