@@ -3,9 +3,9 @@ from vk_api.bot_longpoll import VkLongPoll, VkBotEventType
 from vk_api.utils import get_random_id
 def write_message(sender, message):
     authorize.method('messages.send', {'chat_id': sender, 'message': message, 'random_id': get_random_id()})
-token = "5d6682670dbb8617e8b7e06d03a6ea3a5892bdf237bcd54dbab821cbe7f8dfa9364e55eb019495eca2756"
+token = ""
 authorize = vk_api.VkApi(token = token)
-longpoll = VkBotLongPoll(authorize, group_id=197734658)
+longpoll = VkBotLongPoll(authorize, group_id=)
 for event in longpoll.listen():
     if event.type == VkEventType.MESSAGE_NEW and event.from_chat and event.message.get('text') !="":
         reseived_message = event.message.get('text')
